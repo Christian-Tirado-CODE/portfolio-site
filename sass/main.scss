@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+// COLORS
+$color-brick: #e23d51;
+$color-black: #000;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    background-color: $color-black;
+    color: white;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width:  90%;
+    margin: 0 auto;
+}
+
+.justify-sb {
+    display: flex;
+    justify-content: space-between;
+}
+// Navbar
+.navbar {
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid rgba($color-brick, 0.4);
+    padding: 1rem 0;
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .navbar-nav {
+        font-size: 1rem;
+        list-style-type: none;
+    
+        .nav-item {
+            display: inline-block;
+            padding: 0.25rem .5rem;
+            border: 2px solid $color-brick;
+            margin: 0 .2rem;
+            font-weight: 700;
+            transition: .5s;
+            &:hover {
+                background-color: $color-brick
+            }
+        }
+        
+    }
+    
+}
+
+.selfie__img {
+    width: 400px;
+    margin-right: 100px;
+}
+
+//words that occupy whole width.
+.word-b {
+    display: block;
+}
+
+.font-red {
+    color: $color-brick;
+}
+
+// skills briefly mentioned at beginning of page.
+.skills {
+    color: #999999;
+    font-weight: 600;
+    padding: .5rem;
+}
+
+.download-resume-btn {
+    background-color: transparent;
+    border: 2px solid $color-brick;
+    color: white;
+    font-size: 1rem;
+    padding: .5rem;
+    margin-top: 50px;
+    transition: .5s;
+     outline: none;
+    &:hover {
+        background-color: $color-brick
+    }
+}
+
+
+
+
+

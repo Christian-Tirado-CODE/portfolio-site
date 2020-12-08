@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  background-color: #000;
+  color: white; }
+
+body {
+  font-family: 'Montserrat', sans-serif; }
+
+.container {
+  width: 90%;
+  margin: 0 auto; }
+
+.justify-sb {
+  display: flex;
+  justify-content: space-between; }
+
+.navbar {
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(226, 61, 81, 0.4);
+  padding: 1rem 0; }
+  .navbar .navbar-brand {
+    font-size: 1.5rem; }
+  .navbar .navbar-nav {
+    font-size: 1rem;
+    list-style-type: none; }
+    .navbar .navbar-nav .nav-item {
+      display: inline-block;
+      padding: 0.25rem .5rem;
+      border: 2px solid #e23d51;
+      margin: 0 .2rem;
+      font-weight: 700;
+      transition: .5s; }
+      .navbar .navbar-nav .nav-item:hover {
+        background-color: #e23d51; }
+
+.selfie__img {
+  width: 400px;
+  margin-right: 100px; }
+
+.word-b {
+  display: block; }
+
+.font-red {
+  color: #e23d51; }
+
+.skills {
+  color: #999999;
+  font-weight: 600;
+  padding: .5rem; }
+
+.download-resume-btn {
+  background-color: transparent;
+  border: 2px solid #e23d51;
+  color: white;
+  font-size: 1rem;
+  padding: .5rem;
+  margin-top: 50px;
+  transition: .5s;
+  outline: none; }
+  .download-resume-btn:hover {
+    background-color: #e23d51; }
