@@ -21,6 +21,9 @@ body {
   display: flex;
   justify-content: space-between; }
 
+.align-c-s {
+  align-content: stretch; }
+
 .navbar {
   width: 100%;
   background-color: transparent;
@@ -37,13 +40,20 @@ body {
       border: 2px solid #e23d51;
       margin: 0 .2rem;
       font-weight: 700;
-      transition: .5s; }
+      transition: .5s;
+      cursor: pointer; }
       .navbar .navbar-nav .nav-item:hover {
         background-color: #e23d51; }
 
 .selfie__img {
   width: 400px;
   margin-right: 100px; }
+
+.intro-text {
+  display: flex;
+  align-items: center; }
+  .intro-text div {
+    padding-top: 3rem; }
 
 .word-b {
   display: block; }
@@ -57,13 +67,58 @@ body {
   padding: .5rem; }
 
 .download-resume-btn {
+  display: inline-block;
   background-color: transparent;
   border: 2px solid #e23d51;
   color: white;
   font-size: 1rem;
   padding: .5rem;
-  margin-top: 50px;
+  font-weight: 600;
+  margin-top: 20px;
   transition: .5s;
   outline: none; }
   .download-resume-btn:hover {
     background-color: #e23d51; }
+
+a {
+  text-decoration: none; }
+
+.quotes {
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  width: 60%;
+  margin: 0 auto;
+  height: fit-content;
+  background-color: #e23d51;
+  -webkit-clip-path: polygon(10% 0, 100% 0%, 92% 100%, 0% 100%);
+  clip-path: polygon(10% 0, 100% 0%, 92% 100%, 0% 100%); }
+
+blockquote {
+  width: 80%;
+  margin: 0 auto; }
+
+.slider {
+  position: relative;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  width: 60%;
+  margin: 0 auto;
+  height: 200px;
+  background-color: #e23d51;
+  -webkit-clip-path: polygon(10% 0, 100% 0%, 92% 100%, 0% 100%);
+  clip-path: polygon(10% 0, 100% 0%, 92% 100%, 0% 100%); }
+
+.slide {
+  position: absolute;
+  opacity: 0; }
+
+.slide.active {
+  animation: fade 10s infinite; }
+
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
