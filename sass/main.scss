@@ -14,12 +14,16 @@ $color-black: #000;
 
 
 html {
-    background-color: $color-black;
-    color: white;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: $color-black;
+    color: white;
 }
+
+
 
 header {
     height: 100vh;
@@ -45,7 +49,17 @@ header {
     align-content: stretch;
 }
 
+// double up arrows
 
+.angle-double-up {
+    color: white;
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 10;
+}
 
 // Navbar
 .navbar {
@@ -57,11 +71,11 @@ header {
     transition: all .5s;
     z-index: 10;
     .navbar-brand {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .navbar-nav {
-        font-size: 1rem;
+        font-size: .75rem;
         list-style-type: none;
     
         .nav-item {
@@ -78,7 +92,9 @@ header {
         }
         
     }
-    
+    a {
+        color: white;
+    }
    
 }
 
@@ -100,7 +116,11 @@ header {
 .intro-text {
     display: flex;
     align-items: center;
-    
+    margin-left: 3rem;
+    h1 {
+        font-size: 1.5rem;
+    }
+
     div {
         padding-top: 3rem;
     }
@@ -118,6 +138,7 @@ header {
 
 // skills briefly mentioned at beginning of page.
 .skills {
+    font-size: .9rem;
     color: #999999;
     font-weight: 600;
     padding: .5rem;
@@ -128,7 +149,7 @@ header {
     background-color: transparent;
     border: 2px solid $color-brick;
     color: white;
-    font-size: 1rem;
+    font-size: .8rem;
     padding: .5rem;
     font-weight: 600;
     margin-top: 20px;
@@ -145,7 +166,7 @@ a {
 
 //Quotes
 .quotes {
-    font-size: 1.5rem;
+    
     padding: 1rem .5rem;
     width: 60%;
     margin: 0 auto;
@@ -160,6 +181,8 @@ a {
 blockquote {
     width: 80%;
     margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 2rem;
 }
 
 // QUOTES SLIDER
@@ -211,6 +234,7 @@ blockquote {
     margin-left: auto;
     color: white;
     text-decoration: underline;
+    font-size: 1.1rem;
 }
 
 .align-right {
@@ -227,7 +251,7 @@ blockquote {
 
     h2 {
         text-align: center;
-        font-size: 4rem;
+        font-size: 3rem;
         color: $color-brick;
         font-weight: 700;
     }
@@ -314,17 +338,18 @@ blockquote {
       width: 80%;
 
       &--title {
-          font-size: 2rem;
+          font-size: 1.8rem;
           margin: .5rem 0;
       }
 
       &--text {
-          font-size: 1.2rem;
+          font-size: 1rem;
           padding: 1rem;
           text-align: left;
       }
 
       &--btn {
+          font-size: .8rem;
         width: fit-content;
         color: white;
         background-color: $color-brick;
@@ -339,7 +364,7 @@ blockquote {
       }
 
       .technologies {
-          font-size: .95rem;
+          font-size: .8rem;
           display: inline-block;
           color: $color-brick;
           font-weight: 700;
@@ -356,16 +381,24 @@ blockquote {
 
   // MEDIA QUERIES
   @media only screen and (max-width: 600px) {
+
+   
     header {
-        height: 100vh;
+        height: 100%;
+        margin-bottom: 2rem;
         
         .container {
-            height: 100%;
+            width: 100%;
             margin: 0;
         }
     }
     
-    
+    .container {
+        width: 100%;
+        margin: 0;
+        
+    } 
+
     .justify-sb {
         flex-direction: column-reverse;  
         margin: 0;      
@@ -378,6 +411,7 @@ blockquote {
     
     // Navbar
     .navbar {
+        display: none;
         width: 100%;
         position: fixed;
         background-color: black;
@@ -423,22 +457,26 @@ blockquote {
        
     }
     .selfie__img {
-        width: 400px;
+        width: 300px;
         margin: 0 auto;
     }
     
     .intro-text {
         display: flex;
         align-items: center;
-        
+        margin: 0;
+
         div {
+            width: 100%;
             padding-top: 0;
         }
       
     }
     
     h1 {
+        font-size: 1.5rem;
         text-align: center;
+        margin: 2.5rem 0 0 1rem;
     }
     //words that occupy whole width.
     .word-b {
@@ -463,7 +501,7 @@ blockquote {
         background-color: transparent;
         border: 2px solid $color-brick;
         color: white;
-        font-size: 1rem;
+        font-size: .9rem;
         padding: .5rem;
         font-weight: 600;
         margin: 20px auto;
@@ -477,6 +515,122 @@ blockquote {
     
     a {
         text-decoration: none;
+    }
+
+//Quotes
+.quotes {
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    width: 100%;
+    margin: 0 auto;
+    height: fit-content;
+    background-color: $color-brick;
+    clip-path: unset;
+    -webkit-clip-path: unset;
+    
+}
+
+blockquote {
+    width: 100%;
+    margin: 1rem auto 0;
+    padding: .5rem 1rem;
+}
+
+// QUOTES SLIDER
+
+.slider {
+    position: relative;
+    font-size: 1.1rem;
+    text-align: center;
+    width: 100%;
+    margin: 2rem 0;
+    line-height: 1.5rem;
+    height: 25rem;
+    background-color: $color-brick;
+    clip-path: unset;
+    -webkit-clip-path: unset;
+   
+    h2 {
+        text-align: center;
+        margin: 1rem 0;
+    }
+    .slide {
+        position: absolute;
+        opacity: 0;
+    }
+    .slide.active {
+        
+        animation: fade 10s infinite;
+    }
+}
+
+
+
+
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.recommendation-letter-btn {
+    display: inline;
+    width: fit-content;
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+}
+
+.align-right {
+    display: block;
+    width: 100%;
+    transform: translateX(0);
+}
+
+
+    .projects {
+        h2 {
+            font-size: 2rem;
+            margin: 2rem 0;
+        }
+        .mySlides {
+            flex-direction: column;
+            padding: 0;
+
+            .project__image {
+                align-self: center;
+            }
+            .project__desc {
+                align-self: center;
+                width: 100%;
+
+                &--title {
+                    
+                }
+
+                &--text {
+                    text-align: center;
+                    padding: .5rem;
+                }
+
+                .technologies--container {
+                    display: flex;
+                    flex-direction: column;
+                 }
+           
+                 .technologies {
+                     width: 100%;
+                     margin: 1rem 0;
+                 }
+            }
+        }
     }
     
   }

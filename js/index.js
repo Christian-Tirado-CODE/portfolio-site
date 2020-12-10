@@ -41,3 +41,12 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "flex";
   dots[slideIndex-1].className += " active";
 }
+
+
+//Smooth Scroll - Safari
+
+const scroll = new SmoothScroll('.top a[href*="#"]', {
+  speed: 600
+});
+
+
