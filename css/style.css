@@ -13,6 +13,11 @@ html {
 body {
   font-family: 'Montserrat', sans-serif; }
 
+header {
+  height: 100vh; }
+  header .container {
+    height: 100%; }
+
 .container {
   width: 90%;
   margin: 0 auto; }
@@ -26,9 +31,12 @@ body {
 
 .navbar {
   width: 100%;
-  background-color: transparent;
+  position: fixed;
+  background-color: black;
   border-bottom: 1px solid rgba(226, 61, 81, 0.4);
-  padding: 1rem 0; }
+  padding: 1rem 0;
+  transition: all .5s;
+  z-index: 10; }
   .navbar .navbar-brand {
     font-size: 1.5rem; }
   .navbar .navbar-nav {
@@ -44,6 +52,13 @@ body {
       cursor: pointer; }
       .navbar .navbar-nav .nav-item:hover {
         background-color: #e23d51; }
+
+.scrolling-active .navbar-nav .nav-item {
+  border: none; }
+
+.selfie {
+  display: flex;
+  align-items: center; }
 
 .selfie__img {
   width: 400px;
@@ -102,18 +117,19 @@ blockquote {
   font-size: 1.5rem;
   padding: 1rem .5rem;
   width: 60%;
-  margin: 0 auto;
-  height: 200px;
+  margin: 0 auto 100px;
+  height: 300px;
   background-color: #e23d51;
   -webkit-clip-path: polygon(10% 0, 100% 0%, 92% 100%, 0% 100%);
   clip-path: polygon(10% 0, 100% 0%, 92% 100%, 0% 100%); }
-
-.slide {
-  position: absolute;
-  opacity: 0; }
-
-.slide.active {
-  animation: fade 10s infinite; }
+  .slider h2 {
+    text-align: center;
+    margin: 1rem 0; }
+  .slider .slide {
+    position: absolute;
+    opacity: 0; }
+  .slider .slide.active {
+    animation: fade 10s infinite; }
 
 @keyframes fade {
   0% {
@@ -122,3 +138,186 @@ blockquote {
     opacity: 1; }
   100% {
     opacity: 0; } }
+
+.recommendation-letter-btn {
+  width: fit-content;
+  margin-left: auto;
+  color: white;
+  text-decoration: underline; }
+
+.align-right {
+  width: fit-content;
+  margin-left: auto;
+  transform: translateX(-100%); }
+
+.projects {
+  width: 100%; }
+  .projects h2 {
+    text-align: center;
+    font-size: 4rem;
+    color: #e23d51;
+    font-weight: 700; }
+
+/* Slideshow container */
+.slideshow-container {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  /* Slides */
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  /* On hover, add a black background color with a little bit see-through */
+  /* Add an italic font style to all quotes */
+  /* Add a blue color to the author */ }
+  .slideshow-container .mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center; }
+  .slideshow-container .prev, .slideshow-container .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none; }
+  .slideshow-container .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px; }
+  .slideshow-container .prev:hover, .slideshow-container .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white; }
+  .slideshow-container q {
+    font-style: italic; }
+  .slideshow-container .author {
+    color: cornflowerblue; }
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: transparent;
+  /* The dots/bullets/indicators */
+  /* Add a background color to the active dot/circle */ }
+  .dot-container .dot {
+    cursor: pointer;
+    height: 2px;
+    width: 50px;
+    margin: 0 2px;
+    background-color: rgba(255, 255, 255, 0.25);
+    display: inline-block;
+    transition: background-color 0.6s ease; }
+  .dot-container .active, .dot-container .dot:hover {
+    background-color: white; }
+
+.project__image {
+  width: 20rem; }
+
+.project__desc {
+  width: 80%; }
+  .project__desc--title {
+    font-size: 2rem;
+    margin: .5rem 0; }
+  .project__desc--text {
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-align: left; }
+  .project__desc--btn {
+    width: fit-content;
+    color: white;
+    background-color: #e23d51;
+    padding: 0.25rem .5rem;
+    font-weight: 600; }
+  .project__desc .technologies--container {
+    display: flex;
+    justify-content: space-between; }
+  .project__desc .technologies {
+    font-size: .95rem;
+    display: inline-block;
+    color: #e23d51;
+    font-weight: 700;
+    width: 70%;
+    text-align: left;
+    padding-left: 1rem; }
+
+@media only screen and (max-width: 600px) {
+  header {
+    height: 100vh; }
+    header .container {
+      height: 100%;
+      margin: 0; }
+  .justify-sb {
+    flex-direction: column-reverse;
+    margin: 0; }
+  .align-c-s {
+    margin: 0; }
+  .navbar {
+    width: 100%;
+    position: fixed;
+    background-color: black;
+    border-bottom: 1px solid rgba(226, 61, 81, 0.4);
+    padding: 1rem 0;
+    transition: all .5s;
+    z-index: 10; }
+    .navbar .navbar-brand {
+      font-size: 1.5rem; }
+    .navbar .navbar-nav {
+      font-size: 1rem;
+      list-style-type: none; }
+      .navbar .navbar-nav .nav-item {
+        display: inline-block;
+        padding: 0.25rem .5rem;
+        border: 2px solid #e23d51;
+        margin: 0 .2rem;
+        font-weight: 700;
+        transition: .5s;
+        cursor: pointer; }
+        .navbar .navbar-nav .nav-item:hover {
+          background-color: #e23d51; }
+  .scrolling-active .navbar-nav .nav-item {
+    border: none; }
+  .selfie {
+    width: 100%;
+    justify-content: center; }
+  .selfie__img {
+    width: 400px;
+    margin: 0 auto; }
+  .intro-text {
+    display: flex;
+    align-items: center; }
+    .intro-text div {
+      padding-top: 0; }
+  h1 {
+    text-align: center; }
+  .word-b {
+    display: inline-block; }
+  .font-red {
+    color: #e23d51; }
+  .skills {
+    color: #999999;
+    font-weight: 600;
+    padding: .5rem;
+    text-align: center; }
+  .download-resume-btn {
+    display: block;
+    width: fit-content;
+    background-color: transparent;
+    border: 2px solid #e23d51;
+    color: white;
+    font-size: 1rem;
+    padding: .5rem;
+    font-weight: 600;
+    margin: 20px auto;
+    transition: .5s;
+    outline: none; }
+    .download-resume-btn:hover {
+      background-color: #e23d51; }
+  a {
+    text-decoration: none; } }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */

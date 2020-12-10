@@ -21,6 +21,15 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+header {
+    height: 100vh;
+
+    .container {
+        height: 100%;
+    }
+}
+
+
 // UTILITIES
 .container {
     width:  90%;
@@ -41,9 +50,12 @@ body {
 // Navbar
 .navbar {
     width: 100%;
-    background-color: transparent;
+    position: fixed;
+    background-color: black;
     border-bottom: 1px solid rgba($color-brick, 0.4);
     padding: 1rem 0;
+    transition: all .5s;
+    z-index: 10;
     .navbar-brand {
         font-size: 1.5rem;
     }
@@ -67,8 +79,19 @@ body {
         
     }
     
+   
 }
 
+
+
+.scrolling-active .navbar-nav .nav-item {
+    border: none;
+}
+
+.selfie {
+    display: flex;
+    align-items: center;
+}
 .selfie__img {
     width: 400px;
     margin-right: 100px;
@@ -146,22 +169,28 @@ blockquote {
     font-size: 1.5rem;
     padding: 1rem .5rem;
     width: 60%;
-    margin: 0 auto;
-    height: 200px;
+    margin: 0 auto 100px;
+    
+    height: 300px;
     background-color: $color-brick;
     -webkit-clip-path: polygon(10% 0, 100% 0%, 92% 100%, 0% 100%);
     clip-path: polygon(10% 0, 100% 0%, 92% 100%, 0% 100%);
-
+   
+    h2 {
+        text-align: center;
+        margin: 1rem 0;
+    }
+    .slide {
+        position: absolute;
+        opacity: 0;
+    }
+    .slide.active {
+        
+        animation: fade 10s infinite;
+    }
 }
 
-.slide {
-    position: absolute;
-    opacity: 0;
-}
-.slide.active {
-    
-    animation: fade 10s infinite;
-}
+
 
 
 
@@ -175,4 +204,284 @@ blockquote {
     100% {
         opacity: 0;
     }
+}
+
+.recommendation-letter-btn {
+    width: fit-content;
+    margin-left: auto;
+    color: white;
+    text-decoration: underline;
+}
+
+.align-right {
+    width: fit-content;
+    margin-left: auto;
+    transform: translateX(-100%);
+}
+
+
+
+// PROJECTS
+.projects {
+    width: 100%;
+
+    h2 {
+        text-align: center;
+        font-size: 4rem;
+        color: $color-brick;
+        font-weight: 700;
+    }
+}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+      /* Slides */
+  .mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+  }
+  
+
+  /* Add an italic font style to all quotes */
+  q {font-style: italic;}
+  
+  /* Add a blue color to the author */
+  .author {color: cornflowerblue;}
+
+  }
+  
+  /* The dot/bullet/indicator container */
+  .dot-container {
+    text-align: center;
+    padding: 20px;
+    background: transparent;
+
+    /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 2px;
+    width: 50px;
+    margin: 0 2px;
+    background-color: rgba(255, 255, 255, 0.25);
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  /* Add a background color to the active dot/circle */
+ .active, .dot:hover {
+    background-color: white;
+  }
+  }
+  
+  .project__image{
+      width: 20rem;
+  }
+
+
+  .project__desc {
+      width: 80%;
+
+      &--title {
+          font-size: 2rem;
+          margin: .5rem 0;
+      }
+
+      &--text {
+          font-size: 1.2rem;
+          padding: 1rem;
+          text-align: left;
+      }
+
+      &--btn {
+        width: fit-content;
+        color: white;
+        background-color: $color-brick;
+        padding: 0.25rem .5rem;
+        font-weight: 600;
+      }
+
+
+      .technologies--container {
+         display: flex;
+         justify-content: space-between;
+      }
+
+      .technologies {
+          font-size: .95rem;
+          display: inline-block;
+          color: $color-brick;
+          font-weight: 700;
+          width: 70%;
+          text-align: left;
+          padding-left: 1rem;
+      }
+  }
+
+
+
+
+
+
+  // MEDIA QUERIES
+  @media only screen and (max-width: 600px) {
+    header {
+        height: 100vh;
+        
+        .container {
+            height: 100%;
+            margin: 0;
+        }
+    }
+    
+    
+    .justify-sb {
+        flex-direction: column-reverse;  
+        margin: 0;      
+    }
+    .align-c-s {
+        margin: 0;
+    }
+    
+    
+    
+    // Navbar
+    .navbar {
+        width: 100%;
+        position: fixed;
+        background-color: black;
+        border-bottom: 1px solid rgba($color-brick, 0.4);
+        padding: 1rem 0;
+        transition: all .5s;
+        z-index: 10;
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+    
+        .navbar-nav {
+            font-size: 1rem;
+            list-style-type: none;
+        
+            .nav-item {
+                display: inline-block;
+                padding: 0.25rem .5rem;
+                border: 2px solid $color-brick;
+                margin: 0 .2rem;
+                font-weight: 700;
+                transition: .5s;
+                cursor: pointer;
+                &:hover {
+                    background-color: $color-brick
+                }
+            }
+            
+        }
+        
+       
+    }
+    
+    
+    
+    .scrolling-active .navbar-nav .nav-item {
+        border: none;
+    }
+    
+    .selfie {
+        width: 100%;
+       justify-content: center;
+       
+    }
+    .selfie__img {
+        width: 400px;
+        margin: 0 auto;
+    }
+    
+    .intro-text {
+        display: flex;
+        align-items: center;
+        
+        div {
+            padding-top: 0;
+        }
+      
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    //words that occupy whole width.
+    .word-b {
+        display: inline-block;
+    }
+    
+    .font-red {
+        color: $color-brick;
+    }
+    
+    // skills briefly mentioned at beginning of page.
+    .skills {
+        color: #999999;
+        font-weight: 600;
+        padding: .5rem;
+        text-align: center;
+    }
+    
+    .download-resume-btn {
+        display: block;
+        width: fit-content;
+        background-color: transparent;
+        border: 2px solid $color-brick;
+        color: white;
+        font-size: 1rem;
+        padding: .5rem;
+        font-weight: 600;
+        margin: 20px auto;
+        transition: .5s;
+        outline: none;
+        
+        &:hover {
+            background-color: $color-brick
+        }
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+  }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  
 }
