@@ -33,8 +33,8 @@ header {
 
 .angle-double-up {
   color: white;
-  width: 20px;
-  height: 20px;
+  width: 2rem;
+  height: 2rem;
   position: fixed;
   bottom: 2rem;
   right: 2rem;
@@ -49,9 +49,9 @@ header {
   transition: all .5s;
   z-index: 10; }
   .navbar .navbar-brand {
-    font-size: 1.2rem; }
+    font-size: 2rem; }
   .navbar .navbar-nav {
-    font-size: .75rem;
+    font-size: 1.2rem;
     list-style-type: none; }
     .navbar .navbar-nav .nav-item {
       display: inline-block;
@@ -74,15 +74,15 @@ header {
   align-items: center; }
 
 .selfie__img {
-  width: 400px;
-  margin-right: 100px; }
+  width: 60rem;
+  margin-right: 5rem; }
 
 .intro-text {
   display: flex;
   align-items: center;
   margin-left: 3rem; }
   .intro-text h1 {
-    font-size: 1.5rem; }
+    font-size: 2.4rem; }
   .intro-text div {
     padding-top: 3rem; }
 
@@ -93,7 +93,7 @@ header {
   color: #e23d51; }
 
 .skills {
-  font-size: .9rem;
+  font-size: 1.4rem;
   color: #999999;
   font-weight: 600;
   padding: .5rem; }
@@ -103,10 +103,10 @@ header {
   background-color: transparent;
   border: 2px solid #e23d51;
   color: white;
-  font-size: .8rem;
+  font-size: 1.3rem;
   padding: .5rem;
   font-weight: 600;
-  margin-top: 20px;
+  margin-top: 2rem;
   transition: .5s;
   outline: none; }
   .download-resume-btn:hover {
@@ -127,12 +127,12 @@ a {
 blockquote {
   width: 80%;
   margin: 0 auto;
-  font-size: 1.1rem;
-  line-height: 2rem; }
+  font-size: 2rem;
+  line-height: 3rem; }
 
 .slider {
   position: relative;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 1rem .5rem;
   width: 60%;
   margin: 0 auto 100px;
@@ -147,7 +147,7 @@ blockquote {
     position: absolute;
     opacity: 0; }
   .slider .slide.active {
-    animation: fade 10s infinite; }
+    animation: fade 7s infinite; }
 
 @keyframes fade {
   0% {
@@ -162,7 +162,7 @@ blockquote {
   margin-left: auto;
   color: white;
   text-decoration: underline;
-  font-size: 1.1rem; }
+  font-size: 2rem; }
 
 .align-right {
   width: fit-content;
@@ -170,10 +170,11 @@ blockquote {
   transform: translateX(-100%); }
 
 .projects {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 5rem; }
   .projects h2 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 4.5rem;
     color: #e23d51;
     font-weight: 700; }
 
@@ -190,7 +191,7 @@ blockquote {
   /* Add a blue color to the author */ }
   .slideshow-container .mySlides {
     display: none;
-    padding: 80px;
+    padding: 8rem;
     text-align: center; }
   .slideshow-container .prev, .slideshow-container .next {
     cursor: pointer;
@@ -240,14 +241,15 @@ blockquote {
 .project__desc {
   width: 80%; }
   .project__desc--title {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     margin: .5rem 0; }
   .project__desc--text {
-    font-size: 1rem;
+    font-size: 1.6rem;
     padding: 1rem;
-    text-align: left; }
+    text-align: left;
+    line-height: 2.5rem; }
   .project__desc--btn {
-    font-size: .8rem;
+    font-size: 1.2rem;
     width: fit-content;
     color: white;
     background-color: #e23d51;
@@ -257,13 +259,47 @@ blockquote {
     display: flex;
     justify-content: space-between; }
   .project__desc .technologies {
-    font-size: .8rem;
+    font-size: 1.4rem;
     display: inline-block;
     color: #e23d51;
     font-weight: 700;
     width: 70%;
     text-align: left;
     padding-left: 1rem; }
+
+.contact {
+  width: 100%;
+  margin: 10rem 0; }
+  .contact h2 {
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 5rem; }
+  .contact a {
+    color: white; }
+  .contact .username {
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 400; }
+
+.accounts {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); }
+
+.account {
+  width: 25rem; }
+  .account .account-logo {
+    width: 5rem;
+    margin: 0 auto 1rem; }
+
+footer {
+  width: 100%; }
+
+.copyright {
+  text-align: center;
+  font-size: 1.5rem; }
 
 @media only screen and (max-width: 600px) {
   header {
@@ -308,10 +344,12 @@ blockquote {
     border: none; }
   .selfie {
     width: 100%;
-    justify-content: center; }
-  .selfie__img {
-    width: 300px;
+    justify-content: center;
+    overflow: hidden;
     margin: 0 auto; }
+  .selfie__img {
+    width: 100%;
+    margin: 0; }
   .intro-text {
     display: flex;
     align-items: center;
@@ -338,10 +376,10 @@ blockquote {
     background-color: transparent;
     border: 2px solid #e23d51;
     color: white;
-    font-size: .9rem;
+    font-size: 1.1rem;
     padding: .5rem;
     font-weight: 600;
-    margin: 20px auto;
+    margin: 2rem auto;
     transition: .5s;
     outline: none; }
     .download-resume-btn:hover {
@@ -358,6 +396,7 @@ blockquote {
     clip-path: unset;
     -webkit-clip-path: unset; }
   blockquote {
+    font-size: 1.5rem;
     width: 100%;
     margin: 1rem auto 0;
     padding: .5rem 1rem; }
@@ -368,7 +407,7 @@ blockquote {
     width: 100%;
     margin: 2rem 0;
     line-height: 1.5rem;
-    height: 25rem;
+    height: 30rem;
     background-color: #e23d51;
     clip-path: unset;
     -webkit-clip-path: unset; }
@@ -380,6 +419,8 @@ blockquote {
       opacity: 0; }
     .slider .slide.active {
       animation: fade 10s infinite; }
+  .recommendation-letter-btn {
+    font-size: 1.5rem; }
   @keyframes fade {
     0% {
       opacity: 0; }
@@ -404,10 +445,15 @@ blockquote {
     flex-direction: column;
     padding: 0; }
     .projects .mySlides .project__image {
-      align-self: center; }
+      align-self: center;
+      width: 15rem; }
+    .projects .mySlides .second-project-image {
+      width: 11rem; }
     .projects .mySlides .project__desc {
       align-self: center;
       width: 100%; }
+      .projects .mySlides .project__desc--title {
+        font-size: 2rem; }
       .projects .mySlides .project__desc--text {
         text-align: center;
         padding: .5rem; }
@@ -416,6 +462,30 @@ blockquote {
         flex-direction: column; }
       .projects .mySlides .project__desc .technologies {
         width: 100%;
-        margin: 1rem 0; } }
+        margin: 1rem 0; }
+  .contact {
+    width: 100%;
+    margin: 10rem 0; }
+    .contact h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 5rem; }
+    .contact a {
+      color: white; }
+    .contact .username {
+      display: block;
+      font-size: 1.5rem;
+      text-align: center;
+      font-weight: 400; }
+  .accounts {
+    width: 80%;
+    margin: 0 auto;
+    display: block; }
+  .account {
+    width: 100%;
+    margin-bottom: 5rem; }
+    .account .account-logo {
+      width: 5rem;
+      margin: 0 auto 1rem; } }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

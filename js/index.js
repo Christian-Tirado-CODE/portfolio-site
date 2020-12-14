@@ -9,7 +9,7 @@ setInterval(()=> {
         slide.classList.add('active');
     }
   });
-}, 9500);
+}, 6500);
 
 
 
